@@ -1,0 +1,110 @@
+.table-link {
+    color: #1a0dab !important;
+}
+
+.seal-header {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+.table-user-information {
+    font-size: 14px;
+}
+
+.table-user-information .info-value {
+    font-weight: 700;
+}
+
+.table-user-information > tbody > tr {
+    border: inherit !important;
+}
+
+.table-user-information > tbody > tr > td {
+    border: inherit !important;
+}
+
+.table-ticket {
+    font-size: 14px;
+}
+
+.table-ticket .info-value {
+    font-weight: 700;
+}
+
+.table-ticket > tbody > tr > td {
+    border: inherit !important;
+    padding: 0px 3px;
+}
+
+table .field-value {
+    font-weight: 800;
+}
+
+table .ticket-title {
+    width: 130px;
+}
+
+table .sm-title {
+    width: 70px;
+}
+
+table .smd-title {
+    width: 100px;
+}
+
+table .md-title {
+    width: 130px;
+}
+
+table .lg-title {
+    width: 160px;
+}
+
+table .xlg-title {
+    width: 250px;
+}
+
+.announcement-title {
+
+}
+
+.announcement-date {
+	color: #808080;
+}
+
+.announcement-body {
+	
+}
+
+th {
+    background-color: #a51619;
+    color: #fff;
+}
+
+.even-row {
+    background-color: #efefef;
+}
+
+.odd-row {
+
+}
+
+.numbered-row {
+    text-align: right;
+}
+
+.priority-row {
+    width: 60px !important;
+}
+
+.receipt-preview {
+    padding: 15px 0px;
+}
+
+.search-select {
+    margin-right: 5px;
+}
+.is-required {
+    color: red;
+}

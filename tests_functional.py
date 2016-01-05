@@ -21,7 +21,7 @@ class ServerIsRunningTest(unittest.TestCase):
 
         # Check the title of the site; did I go to the right page?
         self.assertIn('Django', self.browser.title)
-        self.fail('Finish the test!')
+
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')

@@ -1,3 +1,10 @@
-from django.shortcuts import render
+# contrib packages
+from django.contrib import messages
 
-# Create your views here.
+# class-based views
+from django.views.generic import ListView, TemplateView, DetailView
+from django.views.generic.edit import CreateView, UpdateView
+
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
