@@ -17,10 +17,10 @@ class ServerIsRunningTest(unittest.TestCase):
 
     def runTest(self):
         # Access the site
-        self.browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000/demo')
 
         # Check the title of the site; did I go to the right page?
-        self.assertIn('Django', self.browser.title)
+        self.assertIn('PSYSC', self.browser.title)
 
 
 if __name__ == '__main__':
