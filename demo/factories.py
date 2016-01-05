@@ -34,3 +34,14 @@ class UserFactory(factory.django.DjangoModelFactory):
                 .PostGenerationMethodCall('set_password',
                                           ''.join(random.choice(CHARS)
                                                   for _ in range(8))))
+
+    @classmethod
+    def _prepare(cls, create, **kwargs):
+        password = kwargs.pop('password', None)
+        user = super(UserFactory, cls)._prepare(create, **kwargs)
+        if password:
+            user.raw_password = password
+            user.set_password(password)
+            if create:
+                user.save()
+        return user
