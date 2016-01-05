@@ -22,6 +22,4 @@ class HomePageTest(TestCase):
         response = IndexView.as_view()(request)
         response.render()
         self.assertEqual(response.status_code, 200)
-        self.assertTrue(response.content.startswith(b'<!DOCTYPE html>'))
-        self.assertIn(b'<title>PSYSC</title>', response.content)
-        self.assertTrue(response.content.endswith(b'</html>'))
+        self.assertIn(b'<title>PSYSC Database</title>', response.content)
