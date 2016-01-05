@@ -1,0 +1,1 @@
+web: gunicorn psysc_crud.wsgi --log-file -
