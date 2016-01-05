@@ -13,9 +13,7 @@ class AffiliatedSchoolFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = AffiliatedSchool
-        django_get_or_create = (
-            'school_name', 'science_club_members_count', 'teacher_name',
-            'contact_no', 'years_affiliated')
+        django_get_or_create = ('school_name',)
 
     school_name = factory.Sequence(lambda n: 'School%d' % n)
     science_club_members_count = random.randrange(1, 101)
@@ -28,8 +26,11 @@ class UserFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = User
-        django_get_or_create = ('username', 'email', 'password')
+        django_get_or_create = ('username',)
 
     username = factory.Sequence(lambda n: 'user%d' % n)
     email = factory.LazyAttribute(lambda obj: '%s@test.com' % obj.username)
-    password = ''.join(random.choice(CHARS) for _ in range(8))
+    password = (factory
+                .PostGenerationMethodCall('set_password',
+                                          ''.join(random.choice(CHARS)
+                                                  for _ in range(8))))
